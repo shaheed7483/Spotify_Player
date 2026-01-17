@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotify Style Player</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ✅ Top Bar -->
+  <header class="topbar">
+    <nav>
+      <ul>
+        <!-- Left side: Spotify brand -->
+        <li class="brand">
+          <img src="logo.png" alt="Spotify Premium Logo">
+          <span>Spotify</span>
+        </li>
+
+        <!-- Right side: navigation links -->
+        <li class="nav-right">
+          <a href="#" class="active">Home</a>
+          <a href="#" class="active">About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ✅ Main Container -->
+  <main class="container">
+    <div class="card">
+      <div class="hero">
+        <img id="coverImage" src="covers/1.png" alt="Cover">
+      </div>
+      <h2 class="card-title">Playlist</h2>
+      <ul class="track-list" id="trackList"></ul>
+    </div>
+  </main>
+
+  <!-- ✅ Player Footer -->
+  <footer class="player">
+    <div class="player-inner">
+      <div class="eq paused" id="eq">
+        <!-- Equalizer Bars -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 80" fill="currentColor">
+          <g transform="matrix(1 0 0 -1 0 80)">
+            <rect width="10" height="20" x="0"></rect>
+            <rect width="10" height="50" x="15"></rect>
+            <rect width="10" height="30" x="30"></rect>
+            <rect width="10" height="70" x="45"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <span id="currentTime" class="progress-time">0:00</span>
+      <input type="range" id="progressBar" value="0">
+      <span id="duration" class="progress-time">0:00</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="prev" class="icon-btn">⏮</button>
+      <button id="playPause" class="icon-btn big">▶</button>
+      <button id="next" class="icon-btn">⏭</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
